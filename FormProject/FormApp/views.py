@@ -5,7 +5,15 @@ from .forms import ApplicantForm
 from .models import Applicant
 
 # Create your views here.
+# def update_applicant(request, applicant_id):
+#     applicant = Applicant.objects.get(pk=applicant_id)
+#     return render(request, 'update_applicant.html',
+#      {'applicant': applicant})
 
+# def list_applicants(request, applicant_id):
+#     applicant = Applicant.objects.get(pk=applicant_id)
+#     return render(request, 'list_applicants.html',
+#      {'applicant_list': applicant_list})
 def home(request):
     return render(request, 'base.html')
 
