@@ -13,29 +13,29 @@ class ApplicantForm(ModelForm):
         model=Applicant
         fields=('name','address','zip_code','phone','DateOfBirth', 'web', 'gender','email_address','paid')
 
-        # labels={
+        labels={
 
-        #     'name':"",
-        #     'address':"",
-        #     'zip_code':"",
-        #     'phone':"",
-        #     'web':"",
-        #      'gender':"",
-        #      'email_address':"",
-        #      'paid':'Click this if you have paid'
+            'name':"",
+            'address':"",
+            'zip_code':"",
+            'phone':"",
+            # 'web':"",
+            #  'gender':"",
+            #  'email_address':"",
+            #  'paid':'Click this if you have paid'
              
 
-        # }
+        }
 
         widgets={
-            # 'name': forms.TextInput(attrs={'class':'form-control' , 'placeholder':'Full Name (Surname first)'}),
-            # 'address' :forms.TextInput(attrs={'class':'form-control' , 'placeholder':'Valid Address'}),
-            # 'zip_code': forms.TextInput(attrs={'class':'form-control', 'placeholder':'Zip code'}),
-            # 'phone': forms.NumberInput(attrs={'class':'form-control', 'placeholder':'Phone Number'}),
+            'name': forms.TextInput(attrs={'class':'form-control' , 'placeholder':'Full Name (Surname first)'}),
+            'address' :forms.TextInput(attrs={'class':'form-control' , 'placeholder':'Valid Address'}),
+            'zip_code': forms.TextInput(attrs={'class':'form-control', 'placeholder':'Zip code'}),
+            'phone': forms.NumberInput(attrs={'class':'form-control', 'placeholder':'Phone Number'}),
             'DateOfBirth':DateInput(),
-            # 'web': forms.TextInput(attrs={'class':'form-control' , 'placeholder':'web address'}),
+            'web': forms.TextInput(attrs={'class':'form-control' , 'placeholder':'http://abc.com'}),
             'gender': forms.RadioSelect(),
-            # 'email_address': forms.EmailInput(attrs={'class':'form-control' , 'placeholder':'abc@mail.com'}),
+            'email_address': forms.EmailInput(attrs={'class':'form-control' , 'placeholder':'abc@mail.com'}),
             'paid': forms.CheckboxInput()
         }
 
